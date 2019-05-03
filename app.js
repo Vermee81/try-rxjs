@@ -10,3 +10,5 @@ var observer_1 = {
 
 observable_1.subscribe(observer_1);
 // subscribe_1が送るデータの受け取り手としてobserver_1を指定する
+
+Rx.of(1, 2, 3).subscribe(x => console.log('Observer1 got a value: ' + x), undefined, _ => console.log('Observer1 got Complete') );

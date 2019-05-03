@@ -1,3 +1,5 @@
+import * as Rx from 'rxjs';
+
 var observer_1 = {
   next: x => console.log('Observer1 got a value: ' + x),
   error: err => console.log('Observer1 got an error: ' + err),
@@ -11,6 +13,7 @@ function subscribe_1(observer){
   observer.complete();
 }// 指定のObserverに、『1,2,3』というデータと『完了』を送る
 
-subscribe_1(observer_1);
-// subscribe_1が送るデータの受け取り手としてobserver_1を指定する
+var observable_1 = Rx.Observable.create(subscribe_1);
 
+observable_1.subscribe(observer_1);
+// subscribe_1が送るデータの受け取り手としてobserver_1を指定する

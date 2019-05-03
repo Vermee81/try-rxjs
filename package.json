@@ -1,0 +1,25 @@
+{
+  "name": "try-rxjs",
+  "version": "0.0.1",
+  "description": "just for practicing rxjs",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:Vermee81/try-rxjs.git"
+  },
+  "scripts": {
+    "start": "babel-node app.js --presets es2015-node"
+  },
+  "babel": {
+    "presets": [
+      "es2015-node"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.0.0-0",
+    "babel-preset-es2015-node": "^6.1.1",
+    "rx": "^4.1.0",
+    "rx-dom": "^7.0.3",
+    "rxjs": "^6.5.1"
+  }
+}
